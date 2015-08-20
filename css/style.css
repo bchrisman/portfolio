@@ -1,0 +1,196 @@
+/*******************
+
+Author: Brandon Chrisman
+Filename: style.css
+Client: Me, That's Who
+Date: Dec 8th, 2014
+
+/*******************
+Colors:
+  light tan - #f2e6c0
+  tan - #d9cb9e
+  dark gray - #1e1e20
+  lighter gray - #2a2c2b
+  teal - #374140
+*******************/
+
+/****************************************/
+/*         Reset                        */
+/****************************************/
+ul{-webkit-padding-start:0;-moz-padding-start:0;padding:0;margin:0;-webkit-margin-before:0;-webkit-margin-after:0;-webkit-margin-start:0;-webkit-margin-end:0}
+nav li{list-style-type:none;position:relative;}
+a{text-decoration:none;outline:0;}
+img{max-width:100%;max-height:100%;}
+h1,h2,h3,h4,h5,h6{margin:0;padding:0;text-align:center;font-size:2.4em;}
+h2{font-size:2em;}
+.container-fluid{overflow:hidden;}           /* Hides any unnecessary scrollbars */
+::-webkit-input-placeholder{color:#bcb6a4;}  /* WebKit browsers */
+:-moz-placeholder{color:#bcb6a4;}            /* Mozilla Firefox 4 to 18 */
+::-moz-placeholder{color:#bcb6a4;}           /* Mozilla Firefox 19+ */
+:-ms-input-placeholder{color:#bcb6a4;}       /* Internet Explorer 10+ */
+
+/****************************************/
+/*         General Use                  */
+/****************************************/
+#work .row,#contact .row{background:#1e1e20;}
+#about .row,#services .row,#blog .row{background:#374140;}
+h1:before,h1:after{color:#d9cb9e;content:'•';margin:0 10px 0 18px;position:relative;z-index:2;}
+.dotlineCon{position:relative;margin:0 auto;width:8px;}
+.dotline{background:url('../img/x8dot.png');background-repeat:space;height:27.25vw;margin:0 auto;position:absolute;width:8px;z-index:2;}
+.grayTri,.tealTri{background:#374140;position:relative;height:29vw;}
+.tealTri{background:#1e1e20;}
+.grayTri>img, .tealTri>img{position:absolute;top:0px;width:100%;z-index:1;}
+.teal{background:#374140;}
+/****************************************/
+/*          Navigation Section          */
+/****************************************/
+.navbar li>a{color:#f2e6c0;}
+.navbar li>a::before{position:absolute;top:50%;left:50%;color:transparent;	content:'•';text-shadow: 0 0 transparent;font-size: .9em;-webkit-transition: text-shadow 0.3s, color 0.3s;-moz-transition: text-shadow 0.3s, color 0.3s;transition: text-shadow 0.3s, color 0.3s;-webkit-transform: translateX(-50%);-moz-transform:translateX(-50%);transform: translateX(-50%);pointer-events: none;}
+.navbar li>a:hover::before, .navbar li>a:focus::before{color:#f2e6c0;text-shadow:10px 0 #f2e6c0, -10px 0 #f2e6c0;}
+.navbar-brand{display:none;}
+/****************************************/
+/*          Header Section              */
+/****************************************/
+#woodTexture{background-image:url('../img/woodTexture.png');background-repeat:no-repeat;background-position:center center;-o-background-size: 100% 100%, auto;-moz-background-size: 100% 100%, auto;-webkit-background-size: 100% 100%, auto;background-size: 100% 100%, auto;margin-left:-15px;margin-right:-15px;z-index:10;}
+.header{margin-top:70px;text-align:center;position:relative;}
+.banner{margin-top:4px;text-align:center;position:relative;z-index:10;}
+header .dotline{position:relative;margin-bottom:1.5em;}
+/****************************************/
+ /*          About Section              */
+/****************************************/
+.ribCon{position:relative;top:-35px;margin:0 10%;width:80%;}
+.ribbonGray{background:#1e1e20;height:5.966vw;margin:0;padding:0;}
+.ribbonGray:before,.ribbonGray:after{content:"";position:absolute;bottom:0;width:0;height:0;border-top:3vw solid #1e1e20;border-bottom:3vw solid #1e1e20;}
+.ribbonGray:before{right:100%;border-left:3vw solid transparent;}
+.ribbonGray:after{left:100%;border-right:3vw solid transparent;}
+.ribbonGray h2{font-family:'Pompiere';font-size:3vw;margin:0;padding:4%;}
+.photo{background:#d9cb9e;width:100%;height:350px;}
+#about .dotlineCon{margin-top:-18vw;}
+#about .dotline{height:45vw;top:0}
+/****************************************/
+ /*          Work  Section              */
+/****************************************/
+#work{background:#1e1e20;}
+#work h2{color:#d9cb9e;font-family:'Grand Hotel';font-size:1.6em;text-align:left;}
+#work .pad1{padding:1% 5%;}
+#mainImg img{border:solid 5px #2a2c2b;border-radius:4px;display:block;margin:0 auto;width:930px;transition:opacity ease-in-out .3s .3s;}
+#preImgLst{list-style-type:none;}
+#preImgLst img{border:solid 5px #2a2c2b;border-radius:4px;margin:0% 4% 8%;transition:opacity ease-in-out .3s .3s;transition-delay:.3s;}
+#work .rectNav{position:absolute;background:url(../img/rectM.png) repeat-x;display:inline-block;height:81px;min-width:50px;white-space:nowrap;top:0px;left:20px;width:218px;}
+#work .rectL,.rectR{display:inline-block;padding:0;margin-left:-6px;height:81px;width:29px;}
+#work .rectL{position:absolute;background:url(../img/rectL.png);top:0;left:0;}
+#work .rectR{position:absolute;background:url(../img/rectR.png);top:0;right:0px;}
+#work .rectNavCon{position:relative;height:81px;width:264px;margin:1% auto;}
+#work .dotNav{border-radius:8px;display:inline-block;width:16px;height:16px;margin:14.5% 4% 4% 0%;}
+#work .dotNav{background:#afa480;transition:all .3s ease;}
+#work .dotNav:hover{background:#d9cb9e;cursor:pointer;}
+#work .dotNav a{height:16px;width:16px;}
+#work .selected, #work .selected:hover{background:#d9cb9e;cursor:default;}
+#work .preImg{position:relative;}
+#work .mask{border:solid 76px #1e1e20;opacity:0;transition:all .2s ease;width:260px;height:150px;left:18px;top:3px;position:absolute;z-index:800;}
+#work .magnify{background:url(../img/mag.png);display:inline-block;padding:0;text-decoration:none;height:24px;width:24px;opacity:0;text-indent:-9999px;transition:opacity .3s 0s ease-in-out;position:relative;left:33px;top:-10px;z-index:900;}
+#work .magnify:hover{cursor: pointer;}
+#work .preImg:hover .mask{opacity:.7;}
+#work .preImg:hover .magnify{opacity:1;transition-delay:.15s;}
+#workNav{list-style-type:none;display:block;position:static;text-align:center;}
+#techList{list-style-type:none;}
+#techList li, #work p{font-family:'Pompiere';font-size:.9em;}
+#slide1,#slide2,#slide3,#slide4,#slide5{position:relative;transition:opacity ease .5s;}
+.hiddenObj{opacity:0;}
+/****************************************/
+ /*       Services  Section             */
+/****************************************/
+#services{background:#374140}
+#services h2{margin:16px auto;}
+#services .dotlineCon, #services .dotline{height:10vw;}
+#services img{display:block;margin:auto;max-width:128px;max-height:128px;}
+#services p{font-size:36px;}
+/****************************************/
+ /*       Contact   Section             */
+/****************************************/
+#contact{background:#1e1e20;}
+#contact h1+p{font-size: 48px;padding:2% 8%;text-align:center;}
+#contact .dotlineCon{height:10vw;margin-bottom:4%;}
+#contact .dotline{height:10vw;}
+.btm{height:26.8vw;}
+.ninjaMode{display:none;visibility:hidden;}
+input::-webkit-input-placeholder,input::-moz-placeholder,input:-moz-placeholder,input:-ms-input-placeholder{color:#817b66;}
+input[type=text],input[type=email],textarea{width:70%;}
+input[type=text],input[type=email],textarea,input[type=submit]{color:#d9cb9e;background:#2a2c2b;border:0;margin-bottom:28px;outline:0;}
+input[type=text]:focus,input[type=email]:focus,textarea:focus,input[type=submit]:focus{box-shadow:0px 0px 2px 0px #d9cb9e;}
+textarea{resize:none;height:150px;}
+label[for=msg]{position:relative;top:0px;}
+label{display:block;font-size:36px;text-align:right;}
+input[type=submit]{display:block;font-size:42px;margin:auto;padding:.5% 4%;}
+/****************************************/
+/*         Blog    Section              */
+/****************************************/
+#blog h2{font-size:36px;}
+#blog p{font-size:24px;}
+#blog .dotline{height:36vw;}
+#blog img{margin:10px auto;display:block;}
+/****************************************/
+/*         Footer  Section              */
+/****************************************/
+#footer .col-sm-3{position:relative;top:-80px;z-index:9999;}
+#footer h3{font-size:36px;text-align:center;}
+#footer nav li{font-size:24px;text-align:center;}
+#footer span{font-family:'Grand Hotel',cursive;font-size:42px;display:block;text-align:center;}
+#social{text-align:center;white-space:nowrap;margin-bottom:8%;}
+#social li + li{margin-left:10px;}
+#social li {list-style-type:none;font-size:2em;display:inline-block;}
+#social li a {background:url('../img/social.png') no-repeat;outline:0px;text-decoration:none;display:inline-block;height:72px;width:72px;transition:all .3s ease;}
+#social li a.facebook{background-position:0px 0px;}
+#social li a:hover.facebook{background-position:0px -72px;}
+#social li a.pinterest{background-position:-72px 0px;}
+#social li a:hover.pinterest{background-position:-72px -72px;}
+#social li a.twitter{background-position:-145px 0px;}
+#social li a:hover.twitter{background-position:-145px -72px;}
+
+@media screen and (max-width:992px){
+  #footer .col-sm-3{top:-40px;} 
+  #footer span{font-size:30px;margin:44% auto;}
+  #social li{display:block;}
+}
+
+@media screen and (max-width:768px){
+  /****************************************/
+  /*          Navigation Section          */
+  /****************************************/
+  .nav>li{display:block;}
+  .nav>li>a{padding:0;}
+  .navbar-brand{display:block;}
+  .navbar li>a::before{display:none;}
+  .navbar li>a:hover::before, .navbar li>a:focus::before{display:none;}
+  .navbar-nav>li>a{padding:0;line-height:normal;}
+  /****************************************/
+  /*         General Use                  */
+  /****************************************/
+  h1{font-size: 1.8em;}
+  h2{font-size:1.66em;}
+  label{font-size:28px;text-align:left;}
+  .dotline{background:url(../img/x4dot.png);width:4px;}
+  .ribbonGray h2{font-size: 1.33em;margin: 20%;padding: 1%;}
+  .ribbonGray{height:2em;}
+  .ribbonGray:before, .ribbonGray:after{content: "";position:absolute;border-top:1em solid #1e1e20;border-bottom:1em solid #1e1e20;}
+  .para p{padding:1% 4%;}
+  #about .dotline{height: 27vw;top:14vw;}
+  #services img{height:64px;width:64px;}
+  #services p{font-size:30px;padding:6px 12px;}
+  #contact h1+p{font-size:28px;}
+  input[type=text], input[type=email], textarea{width: 100%;}
+  #footer .col-sm-3{position:relative;top:0px;z-index:9999;}
+  #footer span{font-size:36px;margin:8% auto;}
+  #social li{display:inline-block;}
+}
+@media screen and (max-width:555px){
+  .ribbonGray h2{font-size: 1.1em;padding: 2.2% 0%;} 
+}
+@media screen and (max-width:455px){
+  .ribbonGray h2{font-size: .9em;padding: 3.5% 0%;}
+}
+@media screen and (max-width:380px){
+  .ribbonGray:before, .ribbonGray:after{content: "";position:absolute;border-top:.5em solid #1e1e20;border-bottom:.5em solid #1e1e20;}
+  .ribbonGray{height:1em;}
+  .ribbonGray h2{font-size:.66em;padding:1% 0%;}
+}
